@@ -46,8 +46,9 @@ def predict_flaky_tests(model, input_csv, output_dir):
 
 if __name__ == "__main__":
     model_path = 'model/flaky_model.pkl'
-    input_csv = 'input/tests.csv'  # Replace with your input CSV path
-    output_dir = 'output'  # Replace with your desired output directory
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+    input_csv = os.path.join(BASE_DIR, "data", "sample_test_results.csv")
     
     # Ensure output directory exists
     os.makedirs(output_dir, exist_ok=True)
