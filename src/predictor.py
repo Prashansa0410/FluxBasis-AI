@@ -51,6 +51,7 @@ if __name__ == "__main__":
     input_csv = os.path.join(BASE_DIR, "data", "sample_test_results.csv")
     
     # Ensure output directory exists
+    output_dir = "reports"
     os.makedirs(output_dir, exist_ok=True)
     
     # Load model
