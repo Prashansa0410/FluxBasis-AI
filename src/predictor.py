@@ -12,7 +12,14 @@ def load_model(model_path):
 def predict_flaky_tests(model, input_csv, output_dir):
     # Load input data
     data = pd.read_csv(input_csv)
-    predictions.to_csv("reports/predictions.csv", index=False)
+
+    predictions = model.predict(data)
+
+    predictions_df = pd.DataFrame(predictions, columns=["prediction"])
+
+    predictions_df.to_csv("reports/predictions.csv", index=False)
+
+    print("Predictions saved successfully!")
     
     # Ensure 'test_name' column exists
     if 'test_name' not in data.columns:
