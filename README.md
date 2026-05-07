@@ -93,4 +93,22 @@ Integrate FlakeGuard AI into your CI/CD pipeline by adding it as a pre-build ste
 
 - Docker and Kubernetes deployment support
 
+# Dashboard Preview
+
+<img src="screenshots/dashboard.png" width="900"/>
+
+<img src="screenshots/dashboard1.png" width="900"/>
+
+# Classification Report
+
+<img src="screenshots/classificationReport.png" width="900"/>
+
+# SHAP
+
+<img src="screenshots/SHAPFeatureImportance.png" width="900"/>
+
+# swaggerApi
+
+<img src="screenshots/swaggerApi.png" width="900"/>
+
 For more details, refer to the [documentation](path/to/documentation).
