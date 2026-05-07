@@ -112,3 +112,5 @@ Integrate FlakeGuard AI into your CI/CD pipeline by adding it as a pre-build ste
 <img src="screenshots/swaggerApi.png" width="900"/>
 
 For more details, refer to the [documentation](path/to/documentation).
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/2b0523ba-f06d-478c-bd97-6eb8f55fd76e" />
