@@ -1,2 +1,12 @@
-import Link from 'next/link';
-export default function Home(){return <main className="min-h-screen bg-[#f8f7f4]"><section className="mx-auto max-w-6xl px-6 py-24"><p className="mb-6 text-sm font-medium text-accent">AI-powered CI reliability</p><h1 className="max-w-4xl text-6xl font-semibold tracking-tight text-ink md:text-7xl">FluxBasis AI</h1><p className="mt-6 max-w-2xl text-2xl text-slate-600">Make CI reliability predictable.</p><p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">FluxBasis uses machine learning to identify flaky tests before they become recurring CI problems, then explains the signals behind each prediction.</p><div className="mt-10 flex gap-3"><Link href="/dashboard" className="btn-primary">View Dashboard</Link><Link href="/predictions" className="btn-secondary">Explore Predictions</Link></div><div className="mt-20 grid gap-4 md:grid-cols-5">{['Collect','Analyze','Predict','Explain','Improve'].map((s,i)=><div className="card p-6" key={s}><div className="text-sm muted">0{i+1}</div><div className="mt-8 text-xl font-medium">{s}</div></div>)}</div><p className="mt-12 muted">Supported by the current parsers and sample workflow: Selenium · Playwright · Pytest · TestNG</p></section></main>}
+export default function Home() {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-center p-24">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">Welcome to FluxBasis AI</h1>
+        <p className="text-lg text-gray-600">
+          Predictive analytics and model insights platform
+        </p>
+      </div>
+    </main>
+  )
+}
