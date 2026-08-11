@@ -1,0 +1,5 @@
+import Link from 'next/link';
+const nav=[['Dashboard','/dashboard'],['Predictions','/predictions'],['Runs','/runs'],['Insights','/insights'],['Settings','/settings']];
+export function Shell({children}:{children:React.ReactNode}){return <><header className="sticky top-0 z-10 border-b border-black/10 bg-[#f8f7f4]/80 backdrop-blur"><nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"><Link className="font-semibold tracking-tight" href="/">FluxBasis AI</Link><div className="flex gap-1 overflow-x-auto">{nav.map(([n,h])=><Link className="rounded-full px-3 py-2 text-sm text-slate-600 hover:bg-white hover:text-ink" key={h} href={h}>{n}</Link>)}</div></nav></header><main className="mx-auto max-w-7xl px-6 py-10">{children}</main></>}
+export function Stat({label,value}:{label:string;value:string|number}){return <div className="card p-6"><p className="muted text-sm">{label}</p><p className="mt-3 text-3xl font-semibold tracking-tight">{value}</p></div>}
+export function Empty({title}:{title:string}){return <div className="card p-8 text-center muted">{title}</div>}

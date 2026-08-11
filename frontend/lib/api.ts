@@ -1,0 +1,5 @@
+export const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+export type TestSummary={id:string;test_name:string;prediction:string;status:string;confidence:number;flaky_probability:number;risk_level:string;failure_frequency:number;duration:number;last_failure:string|null;framework:string;risk_factors:string[];recommended_action:string|null;shap_values:{feature:string;value:number;importance:number}[]}
+export type Run={id:string;timestamp:string;total_tests:number;passed:number;failed:number;flaky:number;duration:number;reliability_score:number}
+export type Analytics={reliability_score:number;tests_analyzed:number;flaky_tests:number;at_risk_tests:number;model_accuracy:number|null;reliability_trend:{date:string;score:number}[];flaky_trend:{date:string;flaky:number}[];outcome_distribution:{name:string;value:number}[];confidence_distribution:{bucket:string;count:number}[];recent_runs:Run[];top_flaky_tests:TestSummary[]}
+export async function getJson<T>(path:string):Promise<T>{const res=await fetch(`${API}${path}`,{cache:'no-store'}); if(!res.ok) throw new Error(`API ${res.status}`); return res.json()}
